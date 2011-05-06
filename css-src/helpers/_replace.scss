@@ -1,0 +1,57 @@
+/**************************************************************
+
+	@include replace-class(image-name, file-extension);
+  -
+	Replace the element with this image.
+	Automatically generate a css class based on the image name.
+
+**************************************************************/
+@mixin image-replace-auto($name, $hover:none, $ext: png)
+{
+	.#{$name},
+	.#{$name}.active:hover {
+		@include image-replace($name, $ext);
+	}
+	input.#{$name} {
+		cursor:pointer;
+	}
+	@if $hover != none{
+		.#{$name}:hover,
+		.#{$name}.active {
+			@include image-replace($hover, $ext);
+		}
+	}
+}
+
+/**************************************************************
+	
+	@include image-replace(image-name, file-extension);
+	-
+	Replace the element with this image
+	
+**************************************************************/
+@mixin image-replace($name, $ext: png)
+{
+	@include sized-background-image($name, $ext);
+	display:block;
+	text-indent:-9999px;
+	text-align:left;
+	border:0;
+}
+
+
+/**************************************************************
+
+	@include sized-background-image(image-name, file-extension);
+	-
+	Set the backgroud image and determine the width & height.
+
+**************************************************************/
+
+@mixin sized-background-image($name, $ext: png)
+{
+  $filename: '#{$name}.#{$ext}';
+	background:image-url($filename) top left no-repeat transparent;
+	width:image-width($filename);
+	height:image-height($filename);
+}

@@ -1,0 +1,120 @@
+/**************************************************************
+	@include block(second-segment, background-color, file-extension)
+	-
+	Generate the css for a nine-slice container.
+	This is being replaced by CSS3, but still required for older browser support.
+	
+**************************************************************/
+@mixin block($name, $hover: false, $bgc: transparent, $ext: png)
+{
+	.block-#{$name},
+	.block-#{$name}.active:hover {
+		@include block-base($name, $bgc, false, $ext);
+		@include block-fixed-height($name, $bgc, false, $ext);
+	}
+	@if $hover != false{
+		.block-#{$name}:hover,
+		.block-#{$name}.active {
+			@include block-base($hover, $bgc, false, $ext);
+			@include block-fixed-height($hover, $bgc, false, $ext);
+		}
+	}
+}
+
+@mixin block-three($name, $top: true, $mid: true, $bot: true, $bgc: transparent, $ext: png)
+{
+	.block-#{$name} {
+		overflow:auto;
+		@if $top == true{
+			.top{	@include block-base($name, $bgc, 'top', $ext);}
+			@include block-fixed-height($name, $bgc, 'top', $ext);
+		}
+		@if $mid == true{
+			.mid{	@include block-base($name, $bgc, 'mid', $ext);}
+			@include block-fixed-height($name, $bgc, 'mid', $ext);
+		}
+		@if $bot == true{
+			.bot{	@include block-base($name, $bgc, 'bot', $ext);}
+			@include block-fixed-height($name, $bgc, 'bot', $ext);
+		}
+	}
+}
+
+/**************************************************************
+	@include block-base(second-segment, background-color, type[top, mid, bottom], file-extension)
+	-
+	-
+**************************************************************/
+@mixin block-base($name, $bgc: transparent, $type: false, $ext: png)
+{
+	$suffix: '';
+	$valign: top;
+	$eRepeat: no-repeat;
+	$cRepeat: repeat-x;
+	
+	@if $type != false{
+		$suffix: '#{$type}-';
+	}
+	@if $type == bot{
+		$valign: bottom;
+	}
+	@if $type == mid{
+		$eRepeat: repeat-y;
+		$cRepeat: repeat;
+	}
+	
+	$fileL: 'block-#{$name}-#{$suffix}left.#{$ext}';
+	$fileC: 'block-#{$name}-#{$suffix}repeat.#{$ext}';
+	$fileR: 'block-#{$name}-#{$suffix}right.#{$ext}';
+	
+	background:image-url($fileL) $valign left $eRepeat transparent;	
+	padding-left:image-width($fileL);
+	
+	>.block-r{
+		background:image-url($fileR) $valign right $eRepeat transparent;
+		padding-right:image-width($fileR);
+		>.block-c{
+			/*overflow:hidden;*/
+			background:image-url($fileC) $valign left $cRepeat $bgc;
+		}
+	}
+	@extend .class-block-base;	
+}
+
+@mixin block-fixed-height($name, $bgc: transparent, $type: false, $ext: png)
+{
+	$suffix: '';
+	$valign: top;
+	$eRepeat: no-repeat;
+	$cRepeat: repeat-x;
+	
+	@if $type != false{
+		$suffix: '#{$type}-';
+	}
+	@if $type == bot{
+		$valign: bottom;
+	}
+	@if $type == mid{
+		$eRepeat: repeat-y;
+		$cRepeat: repeat;
+	}
+	
+	$fileL: 'block-#{$name}-#{$suffix}left.#{$ext}';
+	$fileC: 'block-#{$name}-#{$suffix}repeat.#{$ext}';
+	$fileR: 'block-#{$name}-#{$suffix}right.#{$ext}';
+	
+	&.fixed-height{
+		&,
+		>.block-r,
+		>.block-r>.block-c{
+			height:image-height($fileL);
+		}
+	}
+}
+
+.class-block-base{
+	/*overflow:hidden;*/
+	&, .block-r, .block-c{
+		display:block;
+	}
+}
