@@ -3,7 +3,7 @@
 #http_path = "http://localhost:8888/"
 http_path = "/"
 css_dir = "css"
-sass_dir = "css-src"
+sass_dir = "stylesheets"
 images_dir = "images"
 javascripts_dir = "js"
 # output_style = :compressed
