@@ -55,3 +55,45 @@
 	width:image-width($filename);
 	height:image-height($filename);
 }
+
+
+@import "compass/utilities/general/min";
+
+/**************************************************************
+
+	@include image-bullet-auto(image-name, image-position, file-extension);
+	-
+	Position an image the left or right of an element.
+	Automatically generate a css class based on the image name.
+	
+**************************************************************/
+
+@mixin image-bullet-auto($name, $align:left, $ext: png)
+{
+	.#{$name} {
+		@include image-bullet($name, $align, $ext);
+	}
+}
+
+/**************************************************************
+
+	@include image-bullet(image-name, image-position, file-extension);
+	-
+	Position an image the left or right of an element.
+		
+**************************************************************/
+@mixin image-bullet($name, $align:left, $ext: png)
+{
+	$filename: '#{$name}.#{$ext}';
+	
+	display:block;
+	border:0;
+	background:image-url($filename) no-repeat scroll $align center transparent;
+	@include min-height(image-height( $filename ) - image-height( $filename ) / 4 );
+  padding-top:image-height( $filename ) / 4;
+	padding-#{$align}:image-width( $filename ) + 5px;
+	
+	@if $align == right{
+		float:right;
+	}
+}

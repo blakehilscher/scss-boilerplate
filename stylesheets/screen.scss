@@ -5,18 +5,15 @@
 
 /* Helpers */
 @import "compass/css3/";
-@import "helpers/_all";
+@import "helpers/_image";
 
 /* Settings */
 @import "partials/_settings";
-
-/* Reset */
 @import "compass/reset";
 
-/* Image Replacements */
-@import "partials/_replace";
-
-/* Shared */
+/* Include everything */
+@import "partials/_image";
+@import "partials/_forms_base";
 @import "partials/_typography";
 @import "partials/_structure";
 @import "partials/_header";

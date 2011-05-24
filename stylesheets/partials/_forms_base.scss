@@ -1,0 +1,118 @@
+$mgColor:#333;
+$mgSize:14px;
+$mgMargin:10px;
+
+.mg-auto-margin{
+  margin-top:$mgMargin;
+  margin-bottom:$mgMargin;
+  &:first-child{margin-top:0;}
+	&:last-child{margin-bottom:0;}
+}
+
+.mountain-goat-form{
+  color:$mgColor;
+  font-size:$mgSize;
+  @extend .mg-auto-margin;
+	
+	.mg-describe{
+    @extend h5;
+    padding:10px 0;
+    overflow:hidden;
+  }
+  .mg-request{
+    overflow:hidden;
+  }
+  .mg-field{
+    overflow:auto;
+    border-bottom:1px solid #ddd;
+    padding-bottom:10px;
+    @extend .mg-auto-margin;
+    
+    &:last-child{
+      border-bottom:0;
+      padding-bottom:0;
+    }
+    
+    .mg-describe{
+      width:30%;
+      float:left;
+    }
+    .mg-request{
+      float:left;
+      width:70%;
+    }
+  }
+  .mg-group{
+    border: 3px solid #eee;
+    padding: 10px;
+    @include border-radius(10px);
+    @extend .mg-auto-margin;
+  }
+  .mg-actions{
+    @extend .mg-auto-margin;
+    input,a{
+      background-color: #333333;
+      color: #ffffff;
+      font-weight: bold;
+      border:none;
+      @include border-radius(10px);
+      &:hover{
+        cursor:pointer;
+      }
+    }
+    a{
+      display:inline-block;
+      padding:10px;
+      text-decoration:none;
+    }
+  }
+  .mg-error-explanation{
+    background-color: #FFA5A5;
+    border: 2px solid #A40000;
+    padding: 10px;
+    @include border-radius(10px);
+    margin-bottom:$mgMargin;
+    
+    ul{
+      @extend .mg-auto-margin;
+      li{
+        list-style-type:disc;
+        margin-left: 20px;
+      }
+    }
+  }
+  textarea,
+  input{
+    color:$mgColor;
+    font-size:$mgSize;
+    padding:10px;
+    border:1px solid #ddd;
+    background-color:#f4f4f4;
+  }
+  textarea{
+    height:140px;
+  }
+}
+
+.mountain-goat-table{
+  @extend .mountain-goat-form;
+  th{
+    font-weight:bold;
+    background-color:#f2f2f2;
+  }
+  tr{
+
+  }
+  th,td{
+    vertical-align:top;
+    padding:10px;
+    border:1px solid #dddddd;
+  }
+  .mg-actions{
+    text-align:center;
+    vertical-align:middle; 
+    input,a{
+      @extend .mg-auto-margin;
+    }
+  }
+}
