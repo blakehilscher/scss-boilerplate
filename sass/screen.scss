@@ -5,20 +5,21 @@
 
 /* Helpers */
 @import "compass/css3/";
+@import "compass/utilities/general/min";
+@import "config/_settings";
 @import "helpers/_image";
 @import "helpers/_structure";
 
-/* Settings */
-@import "partials/_settings";
+/* Include Shared Styles */
 @import "compass/reset";
+@import "shared/_image";
+@import "shared/_forms_base";
+@import "shared/_typography";
+@import "shared/_structure";
+@import "shared/_header";
+@import "shared/_footer";
+@import "shared/_display";
+@import "shared/_forms";
+@import "shared/_lists";
 
-/* Include everything */
-@import "partials/_image";
-@import "partials/_forms_base";
-@import "partials/_typography";
-@import "partials/_structure";
-@import "partials/_header";
-@import "partials/_footer";
-@import "partials/_display";
-@import "partials/_forms";
-@import "partials/_lists";
+/* Include Pages */

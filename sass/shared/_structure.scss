@@ -1,0 +1,12 @@
+/* Size & Position */
+
+#container{
+	width:960px;
+	margin:0 auto;
+}
+#content{
+	@include min-height(400px);
+}
+.clearer{
+	clear:both;
+}
