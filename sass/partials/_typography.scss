@@ -1,45 +1,36 @@
 .typography-base{
-	font-family:arial;
-	color:$font-color;
+	font-family:Arial,Helvetica,sans-serif;
 }
-body,h1,h2,h3,h4,h5,h6,p{
+body,h1,h2,h3,h4,h5,h6{
 	@extend .typography-base;
-	&.inline{
-		display:inline;
-	}
 }
 h1{
 	font-size:30px;
 	line-height:30px;
-	font-weight:bold;
 }
 h2{
 	font-size:24px;
 	line-height:24px;
-	font-weight:bold;
 }
 h3{
 	font-size:18px;
 	line-height:18px;
-	font-weight:bold;
 }
 h4{
 	font-size:16px;
 	line-height:16px;
-	font-weight:bold;
 	text-transform:uppercase;
 }
 h5{
 	font-size:16px;
 	line-height:16px;
-	font-weight:bold;
 }
 h6{
 	font-size:14px;
 	line-height:20px;
-	font-weight:bold;
 }
 body{
+  color:$font-color;
 	font-size:13px;
 	line-height:19px;
 }
@@ -53,7 +44,19 @@ small{
 }
 a{
 	color:$link-color;
+	text-decoration:none;
 	&:hover{
 	 color:$link-hover-color; 
+	 text-decoration:underline;
+	}
+}
+p{
+	margin-top:12px;
+	margin-bottom:12px;
+	&.is-first{
+		margin-top:0;
+	}
+	&.is-last{
+		margin-bottom:0;
 	}
 }

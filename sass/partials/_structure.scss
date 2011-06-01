@@ -5,18 +5,6 @@
 #content{
 	@include min-height(400px);
 }
-
 .clearer{
 	clear:both;
-}
-
-p{
-	margin-top:12px;
-	margin-bottom:12px;
-	&.is-first{
-		margin-top:0;
-	}
-	&.is-last{
-		margin-bottom:0;
-	}
 }

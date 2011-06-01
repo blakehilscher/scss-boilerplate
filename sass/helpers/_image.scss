@@ -1,6 +1,6 @@
 /**************************************************************
 
-	@include replace-class(image-name, file-extension);
+	@include image-replace-auto(image, hover-image, ext)
   -
 	Replace the element with this image.
 	Automatically generate a css class based on the image name.

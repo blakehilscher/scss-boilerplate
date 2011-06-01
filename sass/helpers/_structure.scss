@@ -1,0 +1,7 @@
+@mixin auto-margin($margin:10px)
+{
+  margin-top:$margin;
+  margin-bottom:$margin;
+  &:first-child{margin-top:0;}
+  &:last-child{margin-bottom:0;}
+}

@@ -1,55 +1,48 @@
-$mgColor:#333;
-$mgSize:14px;
-$mgMargin:10px;
+$bhColor:#333;
+$bhSize:14px;
+$bhMargin:10px;
 
-.mg-auto-margin{
-  margin-top:$mgMargin;
-  margin-bottom:$mgMargin;
-  &:first-child{margin-top:0;}
-	&:last-child{margin-bottom:0;}
-}
-
-.mountain-goat-form{
-  color:$mgColor;
-  font-size:$mgSize;
-  @extend .mg-auto-margin;
+.bh-form{
+  color:$bhColor;
+  font-size:$bhSize;
+  @include auto-margin();
 	
-	.mg-describe{
+	.bh-describe{
     @extend h5;
     padding:10px 0;
     overflow:hidden;
   }
-  .mg-request{
+  .bh-request{
     overflow:hidden;
   }
-  .mg-field{
+  .bh-field{
     overflow:auto;
     border-bottom:1px solid #ddd;
     padding-bottom:10px;
-    @extend .mg-auto-margin;
+    @extend .bh-auto-margin;
     
     &:last-child{
       border-bottom:0;
       padding-bottom:0;
     }
     
-    .mg-describe{
+    .bh-describe{
       width:30%;
       float:left;
     }
-    .mg-request{
+    .bh-request{
       float:left;
       width:70%;
     }
   }
-  .mg-group{
+  .bh-group{
     border: 3px solid #eee;
     padding: 10px;
     @include border-radius(10px);
-    @extend .mg-auto-margin;
+    @extend .bh-auto-margin;
   }
-  .mg-actions{
-    @extend .mg-auto-margin;
+  .bh-actions{
+    @extend .bh-auto-margin;
     input,a{
       background-color: #333333;
       color: #ffffff;
@@ -66,15 +59,15 @@ $mgMargin:10px;
       text-decoration:none;
     }
   }
-  .mg-error-explanation{
+  .bh-error-explanation{
     background-color: #FFA5A5;
     border: 2px solid #A40000;
     padding: 10px;
     @include border-radius(10px);
-    margin-bottom:$mgMargin;
+    @extend .bh-auto-margin;
     
     ul{
-      @extend .mg-auto-margin;
+      @extend .bh-auto-margin;
       li{
         list-style-type:disc;
         margin-left: 20px;
@@ -83,19 +76,23 @@ $mgMargin:10px;
   }
   textarea,
   input{
-    color:$mgColor;
-    font-size:$mgSize;
+    color:$bhColor;
+    font-size:$bhSize;
     padding:10px;
     border:1px solid #ddd;
     background-color:#f4f4f4;
+    &.bh-disabled{
+      background: none repeat scroll 0 0 #DDDDDD;
+      color: #666666;
+    }
   }
   textarea{
     height:140px;
   }
 }
 
-.mountain-goat-table{
-  @extend .mountain-goat-form;
+.bh-table{
+  @extend .bh-form;
   th{
     font-weight:bold;
     background-color:#f2f2f2;
@@ -108,11 +105,13 @@ $mgMargin:10px;
     padding:10px;
     border:1px solid #dddddd;
   }
-  .mg-actions{
+  .bh-actions{
     text-align:center;
-    vertical-align:middle; 
+    vertical-align:middle;
     input,a{
-      @extend .mg-auto-margin;
+      @extend .bh-auto-margin;
+      margin-right:5px;
+      &:last-child{margin-right:0;}
     }
   }
 }
