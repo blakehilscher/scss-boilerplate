@@ -5,7 +5,7 @@ $bhMargin:10px;
 .bh-form{
   color:$bhColor;
   font-size:$bhSize;
-  @include auto-margin();
+  @include auto-margin;
 	
 	.bh-describe{
     @extend h5;
