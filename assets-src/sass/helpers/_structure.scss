@@ -13,11 +13,3 @@
     &:last-child{margin-bottom:0;}
   }
 }
-
-@mixin hover-underline()
-{
-  text-decoration:none;
-  &:hover{
-    text-decoration:underline;
-  }
-}

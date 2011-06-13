@@ -1,12 +1,18 @@
 /* Size & Position */
 
 #container{
-	width:960px;
+	width:$width-container;
 	margin:0 auto;
 }
-#content{
-	@include min-height(400px);
+
+#main{
+  
 }
-.clearer{
-	clear:both;
+
+section.main{
+  width:$width-section-main;
+}
+
+aside.main{
+  width:$width-aside-main;
 }
