@@ -1,6 +1,7 @@
 /* Welcome to Compass. In this file you should write your main styles. (or centralize your imports) Import this file using the following HTML or equivalent: <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* Helpers */
+/* Settings */
 /* Project Variables */
+/* Helpers */
 /**************************************************************
 	
 	@include image-replace(image-name, file-extension);
@@ -55,13 +56,53 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
+/* Size & Position */
+#container { width: 960px; margin: 0 auto; }
+
+section.main { width: 720px; }
+
+aside.main { width: 240px; }
+
+/* Text */
+h1 { font-size: 30px; line-height: 30px; }
+
+h2 { font-size: 24px; line-height: 24px; }
+
+h3 { font-size: 18px; line-height: 18px; }
+
+h4 { font-size: 16px; line-height: 16px; }
+
+body { font-family: Arial; color: #333333; font-size: 13px; line-height: 19px; }
+
+p { margin-top: 12px; margin-bottom: 12px; }
+p:first-child { margin-top: 0; }
+p:last-child { margin-bottom: 0; }
+
+strong { font-weight: bold; }
+
+small { font-size: 11px; font-weight: bold; color: #555555; }
+
+a { color: #607890; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+ul { list-style: circle; }
+
+ol { list-style: decimal outside none; }
+
+ul, ol { margin-top: 12px; margin-bottom: 12px; margin-left: 20px; }
+ul:first-child, ol:first-child { margin-top: 0; }
+ul:last-child, ol:last-child { margin-bottom: 0; }
+ul li, ol li { margin-top: 5px; margin-bottom: 5px; }
+ul li:first-child, ol li:first-child { margin-top: 0; }
+ul li:last-child, ol li:last-child { margin-bottom: 0; }
+
 /*  Image Replacements. Helper mixins: - @include image-replace(image, ext);
 	@include image-replace-auto(image, hover-image, ext)
 	@include image-bullet(image, align, ext);
 	@include image-bullet-auto(image, align, ext);
 	@include sized-background-image(image, ext);
 */
-.bh-form, .bh-table { color: #333333; font-size: 14px; margin-top: 10px; margin-bottom: 10px; }
+.bh-form, .bh-table { color: #333333; font-size: 13px; margin-top: 10px; margin-bottom: 10px; }
 .bh-form:first-child, .bh-table:first-child { margin-top: 0; }
 .bh-form:last-child, .bh-table:last-child { margin-bottom: 0; }
 .bh-form .bh-describe, .bh-table .bh-describe { padding: 10px 0; overflow: hidden; }
@@ -88,7 +129,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .bh-form .bh-error-explanation ul:first-child, .bh-table .bh-error-explanation ul:first-child { margin-top: 0; }
 .bh-form .bh-error-explanation ul:last-child, .bh-table .bh-error-explanation ul:last-child { margin-bottom: 0; }
 .bh-form .bh-error-explanation ul li, .bh-table .bh-error-explanation ul li { list-style-type: disc; margin-left: 20px; }
-.bh-form textarea, .bh-table textarea, .bh-form input, .bh-table input { color: #333333; font-size: 14px; padding: 10px; border: 1px solid #ddd; background-color: #f4f4f4; }
+.bh-form textarea, .bh-table textarea, .bh-form input, .bh-table input { color: #333333; font-size: 13px; padding: 10px; border: 1px solid #ddd; background-color: #f4f4f4; }
 .bh-form textarea.bh-disabled, .bh-table textarea.bh-disabled, .bh-form input.bh-disabled, .bh-table input.bh-disabled { background: none repeat scroll 0 0 #DDDDDD; color: #666666; }
 .bh-form textarea, .bh-table textarea { height: 140px; }
 
@@ -100,43 +141,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .bh-table .bh-actions input:last-child, .bh-table .bh-actions a:last-child { margin-bottom: 0; }
 .bh-table .bh-actions input:last-child, .bh-table .bh-actions a:last-child { margin-right: 0; }
 
-/* Text */
-.typography-base, body, h1, h2, h3, h4, h5, .bh-form .bh-describe, .bh-table .bh-describe, h6 { font-family: Arial,Helvetica,sans-serif; }
-
-h1 { font-size: 30px; line-height: 30px; }
-
-h2 { font-size: 24px; line-height: 24px; }
-
-h3 { font-size: 18px; line-height: 18px; }
-
-h4 { font-size: 16px; line-height: 16px; text-transform: uppercase; }
-
-h5, .bh-form .bh-describe, .bh-table .bh-describe { font-size: 16px; line-height: 16px; }
-
-h6 { font-size: 14px; line-height: 20px; }
-
-body { color: #333333; font-size: 13px; line-height: 19px; }
-
-strong { font-weight: bold; }
-
-small { font-size: 11px; font-weight: bold; color: #555555; }
-
-a { color: #607890; text-decoration: none; }
-a:hover { color: #003366; text-decoration: underline; }
-
-p { margin-top: 12px; margin-bottom: 12px; }
-p:first-child { margin-top: 0; }
-p:last-child { margin-bottom: 0; }
-
-/* Size & Position */
-#container { width: 960px; margin: 0 auto; }
-
-#content { min-height: 400px; height: auto !important; height: 400px; }
-
-.clearer { clear: both; }
-
-/* Headers & Navigations */
-/* Visual Elements */
 /* Custom Form Styles */
+/* Visual Elements */
 /* Lists */
+/* Headers */
+/* Navigation */
 /* Include Pages */

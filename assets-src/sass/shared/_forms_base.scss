@@ -1,9 +1,6 @@
-$bhColor:#333;
-$bhSize:14px;
-$bhMargin:10px;
 .bh-form{
-  color:$bhColor;
-  font-size:$bhSize;
+  color:$color-body;
+  font-size:$size-body;
   @include margin-child;
 	
 	.bh-describe{
@@ -74,8 +71,8 @@ $bhMargin:10px;
   }
   textarea,
   input{
-    color:$bhColor;
-    font-size:$bhSize;
+    color:$color-body;
+    font-size:$size-body;
     padding:10px;
     border:1px solid #ddd;
     background-color:#f4f4f4;
