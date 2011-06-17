@@ -9,6 +9,7 @@
 @mixin reset-list()
 {
   list-style:none;
+  vertical-align:top;
   margin:0;
   li{
     margin:0;
