@@ -4,8 +4,8 @@
   @include margin-child;
 	
 	.bh-describe{
-    @extend h5;
-    padding:10px 0;
+	  padding-top:10px;
+	  padding-bottom:10px;
     overflow:hidden;
   }
   .bh-request{
@@ -28,6 +28,18 @@
     .bh-request{
       float:left;
       width:70%;
+    }
+  }
+  .bh-field.bh-checkbox{
+    .bh-describe{
+      padding-top:0px;
+      padding-bottom:0px;
+      width:92%;
+    }
+    .bh-request{
+      vertical-align:middle;
+      width:8%;
+      text-align:center;
     }
   }
   .bh-group{
