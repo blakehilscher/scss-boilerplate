@@ -1,8 +1,9 @@
 /* Navigation */
-
 nav.website{
-  
-}
-nav.container{
-  
+  ul{
+    @include reset-list;
+    li{
+      
+    }
+  }
 }

@@ -1,4 +1,9 @@
 /* Lists */
-.link-list{
-  
+.list-link{
+  ul{
+    @include reset-list;
+    li{
+      
+    }
+  }
 }

@@ -1,1 +1,23 @@
 /* Visual Elements */
+.thumbnail{
+  overflow:hidden;
+  display:inline-block;
+  background-color:white;
+  border:1px solid #dddddd;
+  padding:1px;
+}
+
+.alert-message{
+  background: none repeat scroll 0 0 #FAFAD2;
+  border-radius: 10px 10px 10px 10px;
+  color: #BC8E19;
+  font-weight: bold;
+  padding: 10px;
+  margin:10px 0;
+}
+
+.notice-message{
+  @extend .alert-message;
+  background-color:#BDEDB6;
+  color: #264421;
+}

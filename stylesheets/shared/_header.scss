@@ -1,8 +1,10 @@
 /* Headers */
-
 header.website{
-	
+  width:$width-container;
+	.inner-header-website{
+	  padding:10px;
+	}
 }
-header.container{
+header.main{
   
 }
