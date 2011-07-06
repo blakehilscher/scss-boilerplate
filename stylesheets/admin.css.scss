@@ -1,0 +1,9 @@
+/* Import Config and Helpers */
+@import "_bh_compass";
+
+/* Admin Specific Styles */
+#layout-admin{
+  header.website{
+    background:#333;
+  }
+}

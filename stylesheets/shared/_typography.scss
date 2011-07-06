@@ -40,29 +40,3 @@ a{
 	color:$color-link;
   @include hover-underline();
 }
-ul{
-  list-style:circle;
-}
-ol{
-  list-style: decimal outside none;
-}
-ul, ol{
-  @include margin-child(16px);
-  margin-left:20px;
-  li{
-    @include margin-child(5px);
-  }
-}
-.highlight{
-  margin:30px 0;
-  background:$bg-header;
-  padding:20px;
-  text-align:center;
-  color:white;
-  font-weight:normal;
-  line-height:30px;
-}
-.not-important{
-  color:#fff;
-  background-color:$color-not-important;
-}
