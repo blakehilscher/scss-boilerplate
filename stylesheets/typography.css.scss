@@ -1,10 +1,9 @@
 /* Import Config and Helpers */
 @import "_bh_compass";
 
-/* Typography Styling */
+/* Reset */
 @import "utilities/_html5boilerplate.scss";
 
-/* Include Shared Styles */
-@import "compass/reset";
+/* Styles */
 @import "shared/_image_replace";
 @import "shared/_typography";

@@ -1,8 +1,10 @@
 /* Import Config and Helpers */
 @import "_bh_compass";
 
-/* Application Styles */
-@import "utilities/_html5boilerplate.scss";
+/* Reset */
+@import "utilities/_html5boilerplate";
+
+/* Styles */
 @import "utilities/_bh_form.scss";
 @import "shared/_structure";
 @import "shared/_typography";
@@ -12,4 +14,7 @@
 @import "shared/_lists";
 @import "shared/_header";
 @import "shared/_footer";
-@import "utilities/_helper_classes.scss";
+@import "utilities/_helper_classes";
+
+/* Pages */
+@import "pages/admin";
