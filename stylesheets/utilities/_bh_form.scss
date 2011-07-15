@@ -117,9 +117,12 @@
       }
     }
   }
-  .bh-disabled{
-    background-color:$color-not-important;
-    color: white;
+  .bh-disabled,
+  .not-important{
+    &,input,a{
+      background-color:$color-not-important !important;
+      color: white;
+    }
   }
   /* Contains a series of bh-fields */
   .bh-group{

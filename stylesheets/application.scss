@@ -4,8 +4,10 @@
 /* Reset */
 @import "utilities/_html5boilerplate";
 
+/* Utilities */
+@import "utilities/_bh_form";
+
 /* Styles */
-@import "utilities/_bh_form.scss";
 @import "shared/_structure";
 @import "shared/_typography";
 @import "shared/_image_replace";
