@@ -1,0 +1,42 @@
+/* Text */
+h1{
+	font-size:30px;
+	line-height:30px;
+}
+h2{
+	font-size:24px;
+	line-height:24px;
+}
+h3{
+	font-size:18px;
+	line-height:18px;
+}
+h4{
+	font-size:16px;
+	line-height:16px;
+}
+h5{
+  font-size:14px;
+  line-height:15px;
+}
+body{
+  font-family:Arial;
+  color:$color-body;
+	font-size:$size-body;
+	line-height:19px;
+}
+p{
+  @include margin-child(16px);
+}
+strong{
+	font-weight:bold;
+}
+small{
+	font-size:11px;
+	font-weight:bold;
+	color:$color-body-less;
+}
+a{
+	color:$color-link;
+  @include hover-underline();
+}
