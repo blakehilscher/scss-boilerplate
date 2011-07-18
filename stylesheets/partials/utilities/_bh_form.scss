@@ -45,7 +45,8 @@
       text-align:center;
     }
   }
-  .bh-textfield{
+  .bh-textfield,
+  .bh-passwordfield{
     input{
       color:$color-body;
       font-size:$size-body;
