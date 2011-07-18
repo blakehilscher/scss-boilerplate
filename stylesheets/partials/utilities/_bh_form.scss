@@ -119,11 +119,12 @@
     }
   }
   .bh-disabled,
-  .not-important{
-    &,input,a{
-      background-color:$color-not-important !important;
-      color: white;
-    }
+  .not-important a,
+  .not-important input,
+  a.not-important,
+  input.not-important{
+    background-color:$color-not-important !important;
+    color: white;
   }
   /* Contains a series of bh-fields */
   .bh-group{
