@@ -36,7 +36,9 @@ small{
 	font-weight:bold;
 	color:$color-body-less;
 }
-a{
+a,
+a:active,
+a:visited{
 	color:$color-link;
   @include hover-underline();
 }
