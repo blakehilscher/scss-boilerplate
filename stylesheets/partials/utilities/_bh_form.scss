@@ -20,6 +20,10 @@
       margin-right:10px;
       margin-top:4px;
       line-height:15px;
+      font-weight:normal;
+    }
+    span.bh-describe-detail{
+      margin-left:6px;
     }
   }
   /* Contains Form Element and Description */
@@ -147,8 +151,15 @@
       
     }
   }
+  .bh-header{
+    .bh-describe{
+      @extend h3;
+      width:100%;
+      float:none;
+    }
+  }
   .bh-required{
-    .bh-describe label{
+    >.bh-describe>label{
       background:image-url('bh-form/bh-required.png') left 30% no-repeat ;
       padding-left:image-width('bh-form/bh-required.png') + 4px;
     }
