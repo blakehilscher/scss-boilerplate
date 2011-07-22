@@ -133,6 +133,12 @@
     @include border-radius(10px);
     @include margin-child;
   }
+  .bh-required{
+    .bh-describe label{
+      background:image-url('bh-form/bh-required.png') left 30% no-repeat ;
+      padding-left:image-width('bh-form/bh-required.png') + 4px;
+    }
+  }
 }
 
 .bh-table{
