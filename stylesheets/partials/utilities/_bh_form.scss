@@ -37,11 +37,12 @@
       float:left;
       width:70%;
     }
-    &div:last-child{
+    &:last-child{
       border-bottom:0;
       padding-bottom:0;
     }
   }
+  
   .bh-checkbox{
     .bh-describe{
       padding-top:0px;
@@ -61,6 +62,7 @@
       padding:10px;
       border:1px solid #ddd;
       background-color:#f4f4f4;
+      width:60%;
     }
   }
   .bh-filefield{
@@ -68,6 +70,7 @@
   }
   .bh-textarea{
     textarea{
+      width:90%;
       height:140px;
       color:$color-body;
       font-size:$size-body;
@@ -135,10 +138,14 @@
   }
   /* Contains a series of bh-fields */
   .bh-group{
-    border: 3px solid #eee;
+    border:1px solid #dddddd;
+    border-left:10px solid #dddddd;
+    margin-left:10px;
     padding: 10px;
-    @include border-radius(10px);
-    @include margin-child;
+    @include margin-child(20px);
+    .bh-group{
+      
+    }
   }
   .bh-required{
     .bh-describe label{
