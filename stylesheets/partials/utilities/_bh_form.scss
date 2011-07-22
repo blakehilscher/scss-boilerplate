@@ -12,6 +12,17 @@
 	  padding-top:10px;
 	  padding-bottom:10px;
     overflow:hidden;
+    .bh-describe-detail{
+      font-size:$size-body-small;
+      color:$color-body-less;
+      background:#f2f2f2;
+      padding:4px;
+      display:inline-block;
+      margin-left:4px;
+      margin-right:4px;
+      line-height:15px;
+      @include border-radius(4px);
+    }
   }
   /* Contains Form Element and Description */
   .bh-field{
@@ -28,7 +39,7 @@
       float:left;
       width:70%;
     }
-    &:last-child{
+    &div:last-child{
       border-bottom:0;
       padding-bottom:0;
     }
@@ -45,8 +56,7 @@
       text-align:center;
     }
   }
-  .bh-textfield,
-  .bh-passwordfield{
+  .bh-textfield{
     input{
       color:$color-body;
       font-size:$size-body;
@@ -119,12 +129,11 @@
     }
   }
   .bh-disabled,
-  .not-important a,
-  .not-important input,
-  a.not-important,
-  input.not-important{
-    background-color:$color-not-important !important;
-    color: white;
+  .not-important{
+    &,input,a{
+      background-color:$color-not-important !important;
+      color: white;
+    }
   }
   /* Contains a series of bh-fields */
   .bh-group{
@@ -142,6 +151,7 @@
 }
 
 .bh-table{
+  width:100%;
   @extend .bh-form;
   th{
     font-weight:bold;
