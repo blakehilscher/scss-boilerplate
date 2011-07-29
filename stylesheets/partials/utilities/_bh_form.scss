@@ -91,7 +91,8 @@
     
   }
   /* Contains Form Submits and Buttons */
-  .bh-actions{
+  .bh-actions,
+  &.bh-actions{
     input,a{
       padding: 10px;
       background-color: $color-link;
@@ -160,6 +161,13 @@
       @extend h3;
       width:100%;
       float:none;
+    }
+  }
+  .bh-information{
+    .bh-request{
+      padding-top:10px;
+      padding-bottom:10px;
+      font-weight:bold;
     }
   }
   .bh-required{
