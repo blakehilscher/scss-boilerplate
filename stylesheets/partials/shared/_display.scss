@@ -1,4 +1,7 @@
 /* Visual Elements */
+img{
+  vertical-align:top;
+}
 .thumbnail{
   overflow:hidden;
   display:inline-block;
@@ -6,7 +9,6 @@
   border:1px solid #dddddd;
   padding:1px;
 }
-
 .notice-message{
   @include border-radius(10px);
   background-color: #f2f2f2;
@@ -18,21 +20,18 @@
   margin-top: 10px;
   padding: 10px;
 }
-
 .alert-message{
   @extend .notice-message;
   background-color: #FFA5A5;
   border-color:#993333;
   color: #993333;
 }
-
 .warning-message{
   @extend .notice-message;
   background-color: #FAFAD2;
   border-color:#BC8E19;
   color: #BC8E19;
 }
-
 .success-message{
   @extend .notice-message;
   background-color:#BDEDB6;

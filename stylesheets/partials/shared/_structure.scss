@@ -4,19 +4,19 @@
 	margin:0 auto;
 }
 #main{
+  overflow:auto;
 }
 section.main{
+  float:left;
   width:$width-section-main;
   .inner-section-main{
     padding:10px;
   }
 }
 aside.main{
+  float:left;
   width:$width-aside-main;
   .inner-aside-main{
     padding:10px;
   }
-}
-img{
-  vertical-align:top;
 }

@@ -8,7 +8,7 @@ images_dir = "images"
 javascripts_dir = "js"
 
 # output_style = :expanded or :nested or :compact or :compressed
-output_style = :compressed
+#output_style = :compressed
 
 # To enable relative paths to assets via compass helper functions.
 relative_assets = true

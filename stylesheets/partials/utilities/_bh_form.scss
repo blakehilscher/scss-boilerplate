@@ -12,6 +12,23 @@
 	  padding-top:10px;
 	  padding-bottom:10px;
     overflow:hidden;
+    .bh-describe-detail{
+      font-size:$size-body-small;
+      color:$color-body-less;
+      background:#f2f2f2;
+      padding:4px;
+      margin-right:10px;
+      margin-top:4px;
+      line-height:15px;
+      font-weight:normal;
+    }
+    span.bh-describe-detail{
+      margin-left:6px;
+    }
+    .field_with_errors{
+      display:inline;
+      background:#FFA5A5;
+    }
   }
   /* Contains Form Element and Description */
   .bh-field{
@@ -33,6 +50,7 @@
       padding-bottom:0;
     }
   }
+  
   .bh-checkbox{
     .bh-describe{
       padding-top:0px;
@@ -52,6 +70,7 @@
       padding:10px;
       border:1px solid #ddd;
       background-color:#f4f4f4;
+      width:60%;
     }
   }
   .bh-filefield{
@@ -59,6 +78,7 @@
   }
   .bh-textarea{
     textarea{
+      width:90%;
       height:140px;
       color:$color-body;
       font-size:$size-body;
@@ -117,20 +137,41 @@
       }
     }
   }
-  .bh-disabled{
-    background-color:$color-not-important;
-    color: white;
+  .bh-disabled,
+  .not-important{
+    &,input,a{
+      background-color:$color-not-important !important;
+      color: white;
+    }
   }
   /* Contains a series of bh-fields */
   .bh-group{
-    border: 3px solid #eee;
+    border:1px solid #dddddd;
+    border-left:10px solid #dddddd;
+    margin-left:10px;
     padding: 10px;
-    @include border-radius(10px);
-    @include margin-child;
+    @include margin-child(20px);
+    .bh-group{
+      
+    }
+  }
+  .bh-header{
+    .bh-describe{
+      @extend h3;
+      width:100%;
+      float:none;
+    }
+  }
+  .bh-required{
+    >.bh-describe>label{
+      background:image-url('bh-form/bh-required.png') left 30% no-repeat ;
+      padding-left:image-width('bh-form/bh-required.png') + 4px;
+    }
   }
 }
 
 .bh-table{
+  width:100%;
   @extend .bh-form;
   th{
     font-weight:bold;
