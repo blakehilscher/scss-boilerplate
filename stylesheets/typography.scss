@@ -1,9 +1,6 @@
 /* Import Config and Helpers */
-@import "_bh_compass";
-
-/* Utilities */
-@import "partials/utilities/_html5boilerplate";
+@import "bh-compass/initalize";
 
 /* Styles */
-@import "partials/shared/_image_replace";
-@import "partials/shared/_typography";
+@import "partials/typography";
+@import "partials/image_replace";
