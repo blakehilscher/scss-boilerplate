@@ -1,3 +1,7 @@
+$color-dark-chrome: #27343c;
+$color-light-chrome: #384953;
+$color-link-chrome: #2D98DB;
+
 .bh-devise{
   margin-top:60px;
   background:$color-dark-chrome;
@@ -75,7 +79,6 @@
     .bh-actions{
       input,a{
         padding: 10px 20px;
-        @include background-image(linear-gradient($color-sherpa-orange, #e27100));
         color: #ffffff;
         font-weight: bold;
         border:none;

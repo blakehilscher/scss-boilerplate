@@ -1,21 +1,12 @@
 /* Import Config and Helpers */
-@import "_bh_compass";
-
-/* Utilities */
-@import "partials/utilities/_html5boilerplate";
-@import "partials/utilities/_bh_form";
-@import "partials/utilities/_bh_devise";
+@import "bh-compass/initalize";
 
 /* Styles */
-@import "partials/shared/_structure";
-@import "partials/shared/_typography";
-@import "partials/shared/_image_replace";
-@import "partials/shared/_forms";
-@import "partials/shared/_display";
-@import "partials/shared/_lists";
-@import "partials/shared/_header";
-@import "partials/shared/_footer";
-@import "partials/utilities/_helper_classes";
-
-/* Pages */
-@import "partials/pages/admin";
+@import "partials/structure";
+@import "partials/typography";
+@import "partials/image_replace";
+@import "partials/forms";
+@import "partials/display";
+@import "partials/lists";
+@import "partials/header";
+@import "partials/footer";
