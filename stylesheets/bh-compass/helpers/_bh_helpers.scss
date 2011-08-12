@@ -1,5 +1,49 @@
 /**************************************************************
 	
+	@include floating-list(margin, orientation)
+	-
+	Reset a list and force the list items to float left.
+	
+**************************************************************/
+
+@mixin floating-list()
+{
+  list-style:none;
+  vertical-align:top;
+  margin:0;
+  overflow:auto;
+  li{
+    margin:0;
+    float:left;
+  }
+}
+
+/**************************************************************
+	
+	@include margin-child(margin, orientation)
+	-
+	Place a margin on top and bottom, but only if not first or last.
+	
+**************************************************************/
+
+@mixin margin-child($margin:10px, $orientation:y)
+{
+  @if $orientation == x{
+    margin-left:$margin;
+    margin-right:$margin;
+    &:first-child{margin-left:0;}
+    &:last-child{margin-right:0;}
+  }
+  @if $orientation == y{
+    margin-top:$margin;
+    margin-bottom:$margin;
+    &:first-child{margin-top:0;}
+    &:last-child{margin-bottom:0;}
+  }
+}
+
+/**************************************************************
+	
 	@include image-replace(image-name, file-extension);
 	-
 	Replace the element with this image
