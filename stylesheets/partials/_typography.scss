@@ -45,5 +45,8 @@ a,
 a:active,
 a:visited{
 	color:$color-link;
-  @include hover-underline();
+  text-decoration:none;
+  &:hover{
+    text-decoration:underline;
+  }
 }
