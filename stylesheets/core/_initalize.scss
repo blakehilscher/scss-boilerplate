@@ -8,9 +8,9 @@
 /* Helpers */
 @import "compass/css3/";
 @import "compass/utilities/general/min";
-@import "bh-compass/helpers/bh_helpers";
+@import "core/helpers/bh_helpers";
 
 /* Utilities */
-@import "bh-compass/utilities/html5boilerplate";
-@import "bh-compass/utilities/bh_form";
-@import "bh-compass/utilities/bh_devise";
+@import "core/utilities/html5boilerplate";
+@import "core/utilities/bh_form";
+@import "core/utilities/bh_devise";
