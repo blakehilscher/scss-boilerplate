@@ -1,22 +1,28 @@
 /* Size & Position */
 #container{
-	width:$width-container;
-	margin:0 auto;
+  width:100%;
+	max-width:$width-container;
+	margin:20px auto;
+	background:#fff;
+	@include border-radius(10px);
+	@include box-shadow(#ccc, 1px);
 }
 #main{
   overflow:auto;
 }
 section.main{
-  float:left;
-  width:$width-section-main;
   .inner-section-main{
-    padding:10px;
+    padding:20px;
+  }
+  &.has-aside-main{
+    float:left;
+    width:$width-section-main;
   }
 }
 aside.main{
   float:left;
   width:$width-aside-main;
   .inner-aside-main{
-    padding:10px;
+    padding:20px;
   }
 }
