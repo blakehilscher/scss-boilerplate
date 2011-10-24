@@ -1,3 +1,4 @@
 /* Lists */
-.list-link{
+.list-links{
+  @include list-reset();
 }
