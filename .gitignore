@@ -1,4 +1,3 @@
 .sass-cache/*
-css/*.css
 tmp/*
-public/css/*
+public/stylesheets/*
