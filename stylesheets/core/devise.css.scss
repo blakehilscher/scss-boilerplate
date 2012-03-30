@@ -34,7 +34,7 @@ $color-link-chrome: #2D98DB;
     
     .devise-actions{
       position:relative;
-      .bh-actions{
+      .field-actions{
         margin:0;
         float:left;
       }
@@ -50,13 +50,13 @@ $color-link-chrome: #2D98DB;
       }
     }
 
-    .bh-field{
+    .field{
       margin:20px 0 10px;
-      .bh-describe{
+      .field-describe{
         margin-bottom:10px;
       }
     }
-    .bh-textfield,.bh-passwordfield{
+    .field-textfield,.field-passwordfield{
       input{
         width:380px;
         @include box-shadow(#555 4px 4px 10px);
@@ -66,24 +66,23 @@ $color-link-chrome: #2D98DB;
         background:#f2f2f2;
       }
     }
-    .bh-checkbox{
-      .bh-describe{
+    .field-checkbox{
+      .field-describe{
         color:$color-link;
         font-size:14px;
       }
-      .bh-describe,
-      .bh-request{
+      .field-describe,
+      .field-request{
         display:inline;
       }
     }
-    .bh-actions{
+    .field-actions{
       input,a{
         padding: 10px 20px;
         color: #ffffff;
         font-weight: bold;
         border:none;
         @include border-radius(10px);
-        @include margin-child(10px, x);
         &:hover{
           cursor:pointer;
         }

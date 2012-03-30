@@ -35,29 +35,6 @@
   }
 }
 
-/**************************************************************
-	
-	@include margin-child(margin, orientation)
-	-
-	Place a margin on top and bottom, but only if not first or last.
-	
-**************************************************************/
-
-@mixin margin-child($margin:10px, $orientation:y)
-{
-  @if $orientation == x{
-    margin-left:$margin;
-    margin-right:$margin;
-    &:first-child{margin-left:0;}
-    &:last-child{margin-right:0;}
-  }
-  @if $orientation == y{
-    margin-top:$margin;
-    margin-bottom:$margin;
-    &:first-child{margin-top:0;}
-    &:last-child{margin-bottom:0;}
-  }
-}
 
 /**************************************************************
 	
@@ -83,7 +60,7 @@
 	Automatically generate a css class based on the image name.
 
 **************************************************************/
-@mixin image-replace-auto($name, $hover:none, $ext: png)
+@mixin image-replace-auto($name, $ext: png)
 {
 	.#{$name},
 	.#{$name}.active:hover {
@@ -91,12 +68,6 @@
 	}
 	input.#{$name} {
 		cursor:pointer;
-	}
-	@if $hover != none{
-		.#{$name}:hover,
-		.#{$name}.active {
-			@include image-replace($hover, $ext);
-		}
 	}
 }
 
@@ -151,4 +122,52 @@
 	background:image-url($filename) top left no-repeat transparent;
 	width:image-width($filename);
 	height:image-height($filename);
+}
+
+
+
+/**************************************************************
+	
+	@include sprite-replace(image-name, number-of-sprites, file-extension);
+	-
+	Replace the element with this sprite sheet image
+	
+**************************************************************/
+@mixin sprite-replace($name, $count: 2, $ext: png)
+{
+  $filename: '#{$name}.#{$ext}';
+  $height: image-height($filename) / $count;
+  width:image-width($filename) !important;
+  height:$height !important;
+  display:block;
+	text-indent:-9999px;
+	overflow:hidden;
+	text-align:left;
+	border:0;
+	background:image-url($filename) no-repeat scroll top left transparent;
+	padding:0px !important;
+	margin:0px;
+	&:hover,
+	&.active,
+	&.second-state{
+	  background-position:0 ($height * -1);
+	}
+	@if $count >= 3{
+	  &.third-state{
+	    background-position:0 ($height * 2 * -1);
+	  }
+  }
+  @if $count >= 4{
+	  &.fourth-state{
+	    background-position:0 ($height * 3 * -1);
+	  }
+  }
+}
+
+@mixin sprite-replace-auto($name, $count: 2, $ext: png, $path: '')
+{
+  $filename: '#{$path}/#{$name}';
+  .#{$name}{
+    @include sprite-replace($filename, $count, $ext);    
+  }
 }
