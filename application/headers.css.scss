@@ -1,4 +1,3 @@
-/* Headers */
 header.website{
   width:$width-container;
 	.inner-header-website{
@@ -9,7 +8,4 @@ header.website{
       @include list-float();
     }
   }
-}
-header.main{
-  
 }

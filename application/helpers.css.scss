@@ -81,14 +81,14 @@
 @mixin image-bullet($name, $align:left, $ext: png)
 {
 	$filename: '#{$name}.#{$ext}';
-	
+
 	display:block;
 	border:0;
 	background:image-url($filename) no-repeat scroll $align center transparent;
 	@include min-height(image-height( $filename ) - image-height( $filename ) / 4 );
   padding-top:image-height( $filename ) / 4;
 	padding-#{$align}:image-width( $filename ) + 5px;
-	
+
 	@if $align == right{
 		float:right;
 	}
