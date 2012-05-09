@@ -15,11 +15,26 @@ body{
 #main{
   overflow:auto;
 }
-section.main{
-  .inner-section-main{
-    padding:20px;
+#main.with-aside_content{
+  overflow:hidden;
+  #content{
+    width:640px;
+    float:left;
+  }
+  aside.content{
+    float:left;
+    width:310px;
+    margin-left:10px;
   }
 }
-aside.main{
-  float:left;
+
+#content{
+  .inner-content{
+    padding:10px;
+  }
+}
+aside.content{
+  .inner-aside_content{
+    padding:10px;
+  }
 }
