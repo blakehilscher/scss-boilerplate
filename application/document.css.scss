@@ -1,31 +1,17 @@
 html{
-  
+  background-color:#333;
 }
 body{
-  
+  background-color:transparent;
 }
 #container{
-  width:100%;
-	max-width:$width-container;
-	margin:20px auto;
-	background:#fff;
-	@include border-radius(10px);
-	@include box-shadow(#ccc, 1px);
+  width:$width-container;
+  margin:10px auto;
 }
+
 #main{
   overflow:auto;
-}
-#main.with-aside_content{
-  overflow:hidden;
-  #content{
-    width:640px;
-    float:left;
-  }
-  aside.content{
-    float:left;
-    width:310px;
-    margin-left:10px;
-  }
+  background-color:#fff;
 }
 
 #content{
@@ -33,8 +19,7 @@ body{
     padding:10px;
   }
 }
-aside.content{
-  .inner-aside_content{
-    padding:10px;
-  }
+
+.admin-layout{
+  background-color:adjust-lightness($link-color, -25);;
 }

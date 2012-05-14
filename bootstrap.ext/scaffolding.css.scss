@@ -1,0 +1,16 @@
+.row{
+
+  @for $j from 0 through 12{
+    &.offset#{$j}{
+      $margin:$gridGutterWidth * $j;
+      margin-top:$margin;
+      margin-bottom:$margin;
+    }
+  }
+  
+}
+
+.span-center{
+  margin:0 auto;
+  float:none;
+}

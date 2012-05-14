@@ -1,0 +1,26 @@
+.collection{
+  .collection-title{
+    width:15%;
+    font-weight:bold;
+  }
+  .collection-actions{
+    width:15%;
+  }
+  thead{
+    
+  }
+  tbody{
+    .collection-content{
+      padding:0px;
+      .inner-collection-content{
+        overflow:auto;
+        max-height:120px;
+      }
+    }
+    
+  }
+}
+
+.pages-collection{
+  @extend .collection;
+}

@@ -1,5 +1,7 @@
 /* Variables */
 @import "application/variables";
+@import "bootstrap.ext/scaffolding";
+@import "bootstrap.ext/forms";
 
 /* CSS3 Compass Helpers */
 @import "compass/css3";
@@ -16,6 +18,7 @@
 @import "application/typography";
 @import "application/image_replaces";
 @import "application/collections";
+@import "application/records";
 @import "application/document";
 @import "application/headers";
 @import "application/footers";

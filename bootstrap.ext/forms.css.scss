@@ -1,0 +1,29 @@
+.form-inline{
+  margin-left:20px;
+  .control-group{
+    display: inline-block;
+    .controls{
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .control-label{
+      display: inline-block;
+      float: none;
+      width: auto;
+      min-width:60px;
+      max-width:100px;
+    }
+  }
+}
+
+.form-vertical{
+  .control-group.boolean{
+    .control-label{
+      display: inline; 
+    }
+    .controls{
+      float:left;
+    }
+  }
+}

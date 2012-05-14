@@ -12,22 +12,27 @@ $fontstack-impact:Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "H
 h1{
 	font-size:30px;
 	line-height:30px;
+	margin:10px 0;
 }
 h2{
 	font-size:24px;
 	line-height:24px;
+	margin:10px 0;
 }
 h3{
 	font-size:18px;
 	line-height:18px;
+	margin:10px 0;
 }
 h4{
 	font-size:16px;
 	line-height:16px;
+	margin:10px 0;
 }
 h5{
   font-size:14px;
   line-height:14px;
+	margin:10px 0;
 }
 body{
   font-family:$font-family;
@@ -40,18 +45,33 @@ strong{
 }
 small{
 	font-size:11px;
-	font-weight:bold;
+	color:#555;
+	display: inline-block;
+  font-size: 11px;
+  line-height: 12px;
 }
-a,
-a:active{
+a{
 	color:$link-color;
   text-decoration:none;
+  outline: none !important;
   &:hover{
     color:$link-hover-color;
     text-decoration:underline;
   }
 }
-
+a:active{
+  text-decoration:none;
+  outline: none;
+}
 a:visited{
-  color:$link-visited-color;
+  color:$link-color;
+  outline: none;
+}
+h1,h2,h3,h4,h5,h6,p{
+  &:first-child{
+	  margin-top:0px;
+	}
+	&:last-child{
+	  margin-bottom:0px;
+	}
 }
